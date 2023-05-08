@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		  <!-- Site Metas -->
+		  <meta name="keywords" content="" />
+		  <meta name="description" content="" />
+		  <meta name="author" content="" />
+		
+		
+		<title>Portfolio</title>
+		
+		
+		<!--=====================================================
+			CSS Stylesheets
+		=====================================================-->
+				  <!-- slider stylesheet -->
+				  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+				  <!-- fonts style -->
+				  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+				
+				  <!-- bootstrap core css -->
+				  <link rel="stylesheet" type="text/css" href="{{ url_for('static',     filename='css/bootstrap.css') }}" />
+				
+				  <!-- Custom styles for this template -->
+				  <link href="{{ url_for('static',     filename='css/style.css') }}" rel="stylesheet" />
+				  <!-- responsive style -->
+				  <link href="css/responsive.css" rel="stylesheet" />
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static',     filename='bootstrap/css/bootstrap.min-yy.css') }}" >
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static',     filename='css/linea-yy.css') }}">
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static',     filename='css/ionicons.min-yy.css') }}" >
+		<link rel='stylesheet' type='text/css' href= "{{ url_for('static',     filename='css/owl.carousel-yy.css') }}"  >
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static',     filename='css/magnific-popup-yy.css') }}" >
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static',     filename='css/style-yy.css') }}" >
+
+
+		
+	</head>
+	<body class="sub_page">
+		<div class="hero_area">
+			<!-- header section strats -->
+			<header class="header_section">
+				<div class="container-fluid">
+				  <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+					<a class="navbar-brand" href="{{ url_for('home') }}">
+					  <img src="{{ url_for('static',     filename='images/logo.png') }}" alt="" />
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+		  
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+						<ul class="navbar-nav  ">
+						  <li class="nav-item">
+							<a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="{{ url_for('sales') }}">
+							  Sales Management
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="{{ url_for('attendance') }}">Attendance</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="{{ url_for('payroll') }}">Payroll</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link active" href="{{ url_for('portfolio') }}">
+							  Portfolio
+							</a>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				  </nav>
+				</div>
+			  </header>
+			  <!-- end header section -->
+			</div>
+			<!-- end hero area -->
+		
+		<!--=====================================================
+			Preloader
+		=====================================================-->
+		<div id='preloader' >
+			<div class='loader' ></div>
+			<div class='left' ></div>
+			<div class='right' ></div>
+		</div>
+		
+		
+		<div class='main-content' style="margin-top:100px;">
+			
+			<!--=====================================================
+				Page Borders
+			=====================================================-->
+			<div class='page-border border-left' ></div>
+			<div class='page-border border-right' ></div>
+			<div class='page-border border-top' ></div>
+			<div class='page-border border-bottom' ></div>
+			
+			
+			
+			<!--=====================================================
+				Menu Button
+			=====================================================-->
+			<a href='#' class='menu-btn' >
+				<span class='lines' >
+					<span class='l1' ></span>
+					<span class='l2' ></span>
+					<span class='l3' ></span>
+				</span>
+			</a>
+			
+			
+			<!--=====================================================
+				Menu
+			=====================================================-->
+			<div class='menu' >
+				<div class='inner' >
+					<ul class='menu-items' >
+						
+						<li>
+							<a href='#' class='section-toggle' data-section='intro' >
+								Home
+							</a>
+						</li>
+						
+						<li>
+							<a href='#about' class='section-toggle' data-section='about' >
+								About
+							</a>
+						</li>
+						
+						<li>
+							<a href='#resume' class='section-toggle' data-section='resume' >
+								Resume
+							</a>
+						</li>
+						
+						<li>
+							<a href='#portfolio' class='section-toggle' data-section='portfolio' >
+								My Work
+							</a>
+						</li>
+						
+						
+						<li>
+							<a href='#contact' class='section-toggle' data-section='contact' >
+								Contact
+							</a>
+						</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class='animation-block' ></div>
+			
+			
+			<!--=====================================================
+				Sections
+			=====================================================-->
+			<div class='sections' >
+				
+				<!--=====================================================
+					Main Section
+				=====================================================-->
+				<section id='intro' class='section section-main active' >
+					
+					<div class='container-fluid' >
+						
+						<div class='v-align' >
+							<div class='inner' >
+								<div class='intro-text' >
+									
+									<h1>I'm Wong Yann Yiee</h1>
+									
+									<p>
+										A Friend, Dude and Buddy From Earth
+									</p>
+									
+									<div class='intro-btns' >
+										
+										<a href='#about' class='btn-custom section-toggle' data-section='about' >
+											Discover More
+										</a>
+								
+										
+									</div>
+									
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</section>
+				
+				
+				<!--=====================================================
+					About Section
+				=====================================================-->
+				<section id='about' class='section about-section border-d' >
+					
+					<div class='section-block about-block' >
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								<h2 style="position:relative;">
+									I'm  A <strong class='color' >Programmer</strong>
+									<img class="selfie" src="{{ url_for('static',     filename='images/wongyannyiee_selfie.png') }}" alt="selfie" width="130px" style="position:absolute; right:0; border: 1px solid black;">
+								</h2>
+								
+							</div>
+							
+							<div class='row' >
+								
+								<div class='col-md-4' >
+									
+									<ul class='info-list' >
+										
+										<li>
+											<strong>Name:</strong>
+											<span>Wong Yann Yiee</span>
+										</li>
+										
+										<li>
+											<strong>Job:</strong>
+											<span>Data Analyst</span>
+										</li>
+										
+										<li>
+											<strong>Age:</strong>
+											<span>21 Years</span>
+										</li>
+										
+										<li>
+											<strong>Residence:</strong>
+											<span>Malaysia</span>
+										</li>
+										
+										<li>
+											<strong>Hometown:</strong>
+											<span>Melaka</span>
+										</li>
+										
+										
+										
+									</ul>
+									
+								</div>
+								
+								<div class='col-md-8' >
+								
+									<div class='about-text' style="width:600px; text-align: justify;">
+										<p>
+											My name is Wong Yann Yiee, 21 years old. I born in Malaysia and Melaka is my hometown. I am interested looking for the company which is more focused on data analytics or software engineering by using artificial intelligence. I have finished my studies which inchluded SPM, Bachelor Degree and also Master. I also have developed some basic software or models such as language detection software, chatbot, stock prediction models. Also, I have interned at Microsoft company so that I have some experience that related the works. I can bring some benefits to your company confidently.
+										</p>
+										
+									</div>
+									
+									
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class='section-block services-block' >
+						
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								
+								<h2>My <strong class='color' >Services</strong></h2>
+								
+							</div>
+							
+							
+							
+							<div class='row' >
+								
+								<div class='col-md-4' >
+									<div class='service' >
+										
+										<div class='icon' >
+											<i class='icon-basic-photo' ></i>
+										</div>
+										
+										<div class='content' >
+											
+											<h4>Data Analytics</h4>
+											
+											<p>
+												
+                                                Data analytics is the process of examining, interpreting, and deriving insights from large sets of data to uncover patterns, trends, and valuable information. It involves using various techniques, tools, and statistical methods to analyze data and draw meaningful conclusions.
+											</p>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class='col-md-4' >
+									<div class='service' >
+										
+										<div class='icon' >
+											<i class='icon-basic-keyboard' ></i>
+										</div>
+										
+										<div class='content' >
+											
+											<h4>Programming</h4>
+											
+											<p>
+                                                 Programming is the process of creating instructions or code that a computer can execute to perform specific tasks or solve problems. It involves writing, testing, and maintaining sets of instructions using programming languages.
+											</p>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class='col-md-4' >
+									<div class='service' >
+										
+										<div class='icon' >
+											<i class='ion-social-wordpress-outline' ></i>
+										</div>
+										
+										<div class='content' >
+											
+											<h4>WordPress</h4>
+											
+											<p>
+												WordPress is a popular and widely-used content management system (CMS) that allows individuals and businesses to create and manage websites and blogs. It provides a user-friendly interface and a range of customizable themes and plugins, making it accessible for users with varying levels of technical expertise.
+											</p>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+								
+								
+							</div>
+							
+							
+						</div>
+						
+					</div>
+					
+					<div class='section-block skills-block' >
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								
+								<h2>
+									My <strong class='color' >Skills</strong>
+								</h2>
+								
+							</div>
+							
+							<div class='row' >
+								
+								<div class='col-md-6' >
+									
+									<div class='skill' >
+										
+										<h4>HTML/CSS</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:85%;' ></div>
+										</div>
+										
+									</div>
+									
+									
+									<div class='skill' >
+										
+										<h4>Python</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:90%;' ></div>
+										</div>
+										
+									</div>
+									
+									
+									<div class='skill' >
+										
+										<h4>PHP</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:75%;' ></div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+								<div class='col-md-6' >
+									
+									<div class='skill' >
+										
+										<h4>JavaScript</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:85%;' ></div>
+										</div>
+										
+									</div>
+									
+									
+									<div class='skill' >
+										
+										<h4>WordPress</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:90%;' ></div>
+										</div>
+										
+									</div>
+									
+									
+									<div class='skill' >
+										
+										<h4>SEO</h4>
+										
+										<div class='bar' >
+											<div class='percent' style='width:75%;' ></div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					
+					
+				</section>
+				
+				
+				<!--=====================================================
+					Resume Section
+				=====================================================-->
+				<section id='resume' class='section resume-section border-d' >
+					
+					<div class='section-block timeline-block' >
+						
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								
+								<h2>My <strong class='color' >Education</strong></h2>
+								
+							</div>
+							
+							<ul class='timeline' >
+								
+								<li>
+									
+									<div class='timeline-content' >
+										
+										<h4>Tunku Abdul Rahman University Of Management And Technology</h4>
+										
+										<em>
+											<span>Masters Degree</span>
+											<span>2013-2016</span>
+										</em>
+										
+										<p>
+											I have studied my degree programme at this university. I have award CGPA 3.85. I learned conputer science which included web design, machine learninig, data science and so on.
+										</p>
+										
+									</div>
+									
+								</li>
+								
+								<li>
+									
+									<div class='timeline-content' >
+										
+										<h4>University Of Malaya</h4>
+										
+										<em>
+											<span>Masters Master</span>
+											<span>2017-2020</span>
+										</em>
+										
+										<p>
+											I have studied my master programme at University of Malaya (UM). I focused at data analytics.
+										</p>
+										
+									</div>
+									
+								</li>
+								
+								
+								
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+					
+					<div class='section-block timeline-block' >
+						
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								
+								<h2>My <strong class='color' >Experience</strong></h2>
+								
+							</div>
+							
+							<ul class='timeline' >
+								
+								<li>
+									
+									<div class='timeline-content' >
+										
+										<h4>Tunku Abdul Rahman University Of Management And Technology</h4>
+										
+										<em>
+											<span>Assistance</span>
+											<span>2016</span>
+										</em>
+										
+										<p>
+											After I finished my degree programme, I as a assistance to help my lecturer to prepare some learning materials.
+										</p>
+										
+									</div>
+									
+								</li>
+								
+								<li>
+									
+									<div class='timeline-content' >
+										
+										<h4>Tunku Abdul Rahman University Of Management And Technology</h4>
+										
+										<em>
+											<span>Part-Time Lecturer
+											</span>
+											<span>2017</span>
+										</em>
+										
+										<p>
+											When I was studied my master programme, I have worked as a part-time lecturer at this university. My teached subjects are Machine Learning and Data Science.
+										</p>
+										
+									</div>
+									
+								</li>
+								
+								
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+					
+					
+				</section>
+				
+				
+				<!--=====================================================
+					Portfolio Section
+				=====================================================-->
+				<section id='portfolio' class='section portfolio-section border-d' >
+					
+					<div class='section-block portfolio-block' >
+						
+						<div class='container-fluid' >
+							
+							
+							<div class='section-header' >
+								<h2>My <strong class='color' >Works</strong></h2>
+							</div>
+							
+							<ul class='portfolio-filters' >
+								<li>
+									<a href='#' class='active' data-group='all' >
+										All
+									</a>
+								</li>
+								<li>
+									<a href='#' data-group='tech' >
+									    Analytics
+									</a>
+								</li>
+								<li>
+									<a href='#' data-group='photography' >
+									    AI
+									</a>
+								</li>
+							</ul>
+							
+							<ul class='portfolio-items' >
+								
+								<li data-groups='["web","tech"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/retail_analytics.png') }}" alt style="height:315px;">
+										
+										<div class='overlay' >
+											
+											<a href='#popup-1' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-1' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/retail_analytics.png') }}" alt>
+												
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>Retail Data Analytics</h4>
+													
+													<!--project popup description-->
+													<p>
+														You are provided with historical sales data for 45 stores located in different regions - each store contains a number of departments. The company also runs several promotional markdown events throughout the year. These markdowns precede prominent holidays, the four largest of which are the Super Bowl, Labor Day, Thanksgiving, and Christmas. The weeks including these holidays are weighted five times higher in the evaluation than non-holiday weeks.
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								<li data-groups='["tech","photography"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/hr_analytics.png') }}"  alt style="height:315px;">
+										
+										<div class='overlay' >
+											
+											<a href='#popup-2' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-2' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/hr_analytics.png') }}" alt>
+												
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>HR Analytics: Job Change of Data Scientists</h4>
+													
+													<!--project popup description-->
+													<p>
+														A company which is active in Big Data and Data Science wants to hire data scientists among people who successfully pass some courses which conduct by the company. Many people signup for their training. Company wants to know which of these candidates are really wants to work for the company after training or looking for a new employment because it helps to reduce the cost and time as well as the quality of training or planning the courses and categorization of candidates. Information related to demographics, education, experience are in hands from candidates signup and enrollment.
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								<li data-groups='["web","photography"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/airplane.png') }}" alt style="height:315px;">
+										
+										<div class='overlay' >
+											
+											<a href='#popup-3' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-3' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/airplane.png') }}" alt>
+												
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>Airline Passenger Satisfaction</h4>
+													
+													<!--project popup description-->
+													<p>
+														This dataset contains an airline passenger satisfaction survey. What factors are highly correlated to a satisfied (or dissatisfied) passenger? Can you predict passenger satisfaction?
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								
+								<li data-groups='["web"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/crypto.png') }}" alt style="height:315px;"> 
+										
+										<div class='overlay' >
+											
+											<a href='#popup-4' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-4' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/crypto.png') }}" alt>
+												
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>Cryptocurrency Prediction Artificial Intelligence</h4>
+													
+													<!--project popup description-->
+													<p>
+														I developed Cryptocurrency Prediction (Deep Learning with LSTM Neural Networks) software with Artificial Intelligence. I predicted the fall on December 28, 2021 with 98.5% accuracy in the XRP/USDT pair. '0.009179626158151918' MAE Score, '0.0002120391943355104' MSE Score, 98.35% Accuracy Question software has been completed.
+
+The XRP/USDT pair forecast for December 28, 2021 was correctly forecasted based on data from Binance.
+
+Software codes and information are shared with you as open source code free of charge on GitHub and My Personal Web Address.
+
+
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								<li data-groups='["tech"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/supermarket.png') }}" alt style="height:315px;">
+										
+										<div class='overlay' >
+											
+											<a href='#popup-5' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-5' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/supermarket.png') }}" alt style="height:315px;">
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>Supermart Grocery Sales - Retail Analytics Dataset</h4>
+													
+													<!--project popup description-->
+													<p>
+														Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								<li data-groups='["photography"]' >
+									<div class='inner' >
+										<img src="{{ url_for('static',     filename='images/detect.png') }}" alt style="height:315px;">
+										
+										<div class='overlay' >
+											
+											<a href='#popup-6' class='view-project' >
+												View Project
+											</a>
+											
+											<!--project popup-->
+											<div id='popup-6' class='popup-box zoom-anim-dialog mfp-hide' >
+												<figure>
+													
+													<!--project popup image-->
+													<img src="{{ url_for('static',     filename='images/detect.png') }}" alt>
+												
+												</figure>
+												<div class='content' >
+													
+													<!--project popup title-->
+													<h4>Language Detect Artificial Intelligence Software</h4>
+													
+													<!--project popup description-->
+													<p>
+														I developed 'Language Detection Artificial Intelligence Software'. I share this software with all humanity for free from Kaggle and GitHub. It is an NLP system.
+													</p>
+													
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+								
+							</ul>
+							
+						</div>
+					
+					</div>
+					
+				</section>
+				
+				
+				<!--=====================================================
+					Contact Section
+				=====================================================-->
+				<section id='contact' class='section contact-section border-d' >
+					
+					<div class='section-block contact-block' >
+						
+						<div class='container-fluid' >
+							
+							<div class='section-header' >
+								<h2>Contact <strong class='color' >Me</strong></h2>
+							</div>
+							
+							
+							<div class='row' >
+							
+								<div class='col-md-8' >
+									
+									<div class='contact-form' >
+									
+										<form id='contact-form' data-toggle='validator' method='post' action='mail.php' >
+										
+											<div id='contact-form-result' ></div>
+										
+											<div class='row' >
+												
+												<div class='col-md-6' >
+													<div class='form-group' >
+														
+														<input type='text' class='form-control' placeholder='Name' name='name' required>
+														<div class='help-block with-errors' ></div>
+														
+													</div>												
+												</div>
+												
+												<div class='col-md-6' >
+													<div class='form-group' >
+														
+														<input type='email' class='form-control' placeholder='Email' name='email' required>
+														<div class='help-block with-errors' ></div>
+													
+													</div>
+												</div>
+												
+											</div>
+											
+											<div class='form-group' >
+												
+												<input type='text' class='form-control' placeholder='Subject' name='subject' required>
+												<div class='help-block with-errors' ></div>
+											
+											</div>
+											
+											<div class='form-group' >
+												
+												<textarea class='form-control' placeholder='Message' name='message' rows='5' required></textarea>
+												<div class='help-block with-errors' ></div>
+												
+											</div>
+											
+											<div class='form-group text-center' >
+												<button type='submit' class='btn-custom btn-color' >
+													Send Message
+												</button>
+											</div>
+											
+										</form>
+										
+									</div>
+									
+									
+								</div>
+								
+								<div class='col-md-4' >
+									
+									<div class='contact-info-icons' >
+										
+										<div class='contact-info' >
+											
+											<i class='ion-ios-location-outline' ></i>
+											
+											<p>
+												Jalan Angkasa Nuri<br>
+												76100,Melaka
+											</p>
+											
+										</div>
+										
+										
+										<div class='contact-info' >
+											
+											<i class='ion-ios-telephone-outline' ></i>
+											
+											<p>
+												(+06) 1159199428<br>
+												(+06) 113362332
+											</p>
+											
+										</div>
+										
+										
+										<div class='contact-info' >
+											
+											<i class='ion-android-globe' ></i>
+											
+											<p>
+												wyy040291@gmail.com<br>
+												wongyyy-wm21@student.tarc.edu.my
+											</p>
+											
+										</div>
+										
+										
+										
+										
+									</div>
+									
+									
+									
+								</div>
+								
+								
+							</div>
+							
+							
+							
+						</div>
+					
+					</div>
+					
+				</section>
+				
+			</div>
+			
+		</div>
+		
+		
+		<!--=====================================================
+			JavaScript Files
+		=====================================================-->
+		<script src="{{ url_for('static',     filename='js/jquery.min-yy.js') }}" ></script>
+		<script src="{{ url_for('static',     filename='js/jquery.shuffle.min-yy.js') }}"></script>
+		<script src="{{ url_for('static',     filename='js/owl.carousel.min-yy.js') }}" ></script>
+		<script src="{{ url_for('static',     filename='js/jquery.magnific-popup.min-yy.js') }}"  ></script>
+		<script src="{{ url_for('static',     filename='js/validator.min-yy.js') }}" ></script>
+		<script src="{{ url_for('static',     filename='js/script-yy.js') }}" ></script>
+		
+	</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Reflux HTML CSS Template</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+
+      <!-- slider stylesheet -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+      <!-- fonts style -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+  
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',     filename='css/bootstrap.css') }}" />
+  
+      <!-- Custom styles for this template -->
+      <link href="{{ url_for('static',     filename='css/style.css') }}" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="{{ url_for('static',     filename='css/responsive.css') }}" rel="stylesheet" />
+
+      <!-- ------------------------------------------------------- -->
+
+      <link href="{{ url_for('static',     filename='css/jybootstrap.min.css') }}" rel="stylesheet" />
+
+      <!-- Additional CSS Files -->
+      <link rel="stylesheet" href="{{ url_for('static',     filename='css/jyfontawesome.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static',     filename='css/jytemplatemo-style.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static',     filename='css/jyowl.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static',     filename='css/jylightbox.css') }}" />
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+              <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static',     filename='images/logo.png') }}" alt="" />
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav  ">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('sales') }}">
+                        Sales Management
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('attendance') }}">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('payroll') }}">Payroll</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('portfolio') }}">
+                        Portfolio
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- end header section -->
+      </div>
+      <!-- end hero area -->
+    </div>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="{{ url_for('static',     filename='images/author-image.jpg') }}" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Johnston Yap</h4>
+              <span>Data Scientist</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section2">Skills</a></li>
+                <li><a href="#section3">My Work</a></li>
+                <li><a href="#section4">Contact Me</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://fb.com/templatemo"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2019 Reflux Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >Welcome to my portfolio! I'm Johnston Yap, a skilled data scientist specializing in extracting valuable insights 
+              from complex datasets. Degree in Data Scince as the highest qualification. With expertise in machine learning, 
+              predictive modeling, and data visualization. Let's unlock the power of data together and make informed decisions
+               for success.</span>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="{{ url_for('static',     filename='images/right-image.jpg') }}" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Experience</h4>
+                  <p>
+                    I'm an accomplished data scientist with expertise in machine learning, collaborative projects, and 
+                    impactful publications. I've successfully developed models to predict customer churn, achieved significant 
+                    improvements in recommendation systems, led supply chain analysis projects, and contributed research on
+                     deep learning for sentiment analysis. I've also presented at national conferences on feature engineering 
+                     and practical applications of natural language processing.
+                  </p>
+                  <div class="white-button">
+                    <a href="#section2">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Sed sagittis rhoncus velit</h4>
+                  <p>
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum fermentum
+                    eleifend nibh, vitae sodales elit finibus pretium.
+                    Suspendisse potenti. Ut sollicitudin risus a sollicitudin
+                    semper.
+                  </p>
+                  <div class="white-button">
+                    <a href="#section3">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="images/left-image.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>What I'm good at?</h2>
+            <div class="line-dec"></div>
+            <span
+              >Take a loke at some of the skills I have</span
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>Cloud Compute</h4>
+                <p>
+                  I maintain servers for database storage,
+                  model training, and model deployment.
+                  Processing data that is not time-driven.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4>Machine Learning </h4>
+                <p>
+                  Machine learning is more than an API call 
+                  to scikit-learn, I love the math and theory 
+                  as well as the implementation.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4>Model Deployment</h4>
+                <p>
+                  I implement machine learning models 
+                  in real world production systems using
+                   REST API's
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4>Data Analytics</h4>
+                <p>
+                  I love telling story. Making a beautiful 
+                  and compelling presentation is one of my 
+                  fauvorite skills
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>My Work</h2>
+            <div class="line-dec"></div>
+            <span
+              ></span
+            >
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="people"
+                    name="isotope-filter"
+                  />
+                  <span>Cloud</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="nature"
+                    name="isotope-filter"
+                  />
+                  <span>M.Learning</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="animals"
+                    name="isotope-filter"
+                  />
+                  <span>Analytics</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-01.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-01.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>AWS C.Compute</h4>
+                      <span>AWS RDS Pricing & Cost Optimization</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-02.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-02.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Aurora & Grafana</h4>
+                      <span>Monitoring Amazon RDS and Amazon Aurora using Amazon Managed Grafana</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-03.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-03.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>API's</h4>
+                      <span>Distributed AI API's</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-04.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-04.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Cumulocity</h4>
+                      <span>A Machine Learning Platform</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-05.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-05.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Vizualization</h4>
+                      <span>Brazilian Development</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="{{ url_for('static',     filename='images/portfolio-06.jpg') }}"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="{{ url_for('static',     filename='images/portfolio-06.jpg') }}"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Analytics Result</h4>
+                      <span>Profitabailty Indicator Ratios</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+              efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</span
+            >
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your name..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your email..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          class="form-control"
+                          id="message"
+                          placeholder="Your message..."
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static',     filename='js/jyjquery.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/jybootstrap.bundle.min.js') }}"></script>
+
+    <script src="{{ url_for('static',     filename='js/jyisotope.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/jyowl-carousel.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/jylightbox.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/jycustom.js') }}"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
