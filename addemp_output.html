@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',     filename='/images/favicon_employee.png') }}">
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',     filename='css/bootstrap.css') }}" />
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',     filename='css/style.css') }}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{{ url_for('static',     filename='css/responsive.css') }}" rel="stylesheet" />
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+body{
+    height:auto;
+    line-height: normal;
+}
+.div-add{
+  height:auto;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-add{
+    line-height: normal;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    height:auto;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #f2f2f2;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+    opacity: 1.0; /* Sets the element to 50% transparent */
+}
+.container-add header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container-add header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #373636;
+}
+.container-add form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 250px;
+    line-height: normal;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.container-add form .form{
+    position: absolute;
+    background-color: #f2f2f2;
+    transition: 0.3s ease;
+}
+form.secActive .form.first-add{
+    opacity: 0;
+    pointer-events: none;
+}
+.container-add form .title-add{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 6px 0;
+    color: #333;
+}
+.container-add form .fields-add{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container-add form button, .backBtn-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    margin: 17px 0;
+    /*background-color: #373636;*/
+    transition: all 0.3s linear;
+    cursor: pointer;
+    background-color: #373636; 
+    border-radius: 5px; 
+    height: 45px; 
+    font-size: 17px; 
+    margin-right: 10px; 
+    padding: 10px 15px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.container-add form .btnText-add{
+    font-size: 10px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: black;
+}
+form button i,
+form .backBtn-add i{
+    margin: 0 6px;
+}
+form .backBtn-add i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+    
+}
+form .buttons button , .backBtn-add{
+    margin-right: 14px;
+}
+
+    </style>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Added Employee Details</title> 
+</head>
+
+<body class="sub_page" style="height: 100vh;">
+    <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+              <img src="{{ url_for('static',     filename='images/logo.png') }}" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('sales') }}">
+                      Sales Management
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('attendance') }}">Attendance</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('payroll') }}">Payroll</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">
+                      Portfolio
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+    <!-- end hero area -->
+    <section class="service_section layout_padding-bottom layout_padding2-top" style="padding-top: 95px;">
+        <div class="div-add">
+            <div class="container-add" style="opacity: 0.9;">
+                <h1 style="font-size: 34px; color: green; text-align: center; margin-top: 20px;"><b>SAVE SUCCESSFUL</b></h1>
+                <form action="http://3.134.115.108:80/" autocomplete="on" method = "GET">
+                  <center><br>
+                  <h2 style="font-size: 27px;"><b>Employee has been added to the database</b></h2><br>
+                  <h2 id="emp_id" style="font-size: 27px;">{{ emp_id }}</h2><br>
+                  <title>Add Emp Output</title>
+                  <button class="nextBtn-add">
+                    <span class="btnText-add" ><a href="{{ url_for('add') }}" style="color: whitesmoke; font-size: 15px;">Go Back</a></span><br>
+                  </button>
+                  </center>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>
